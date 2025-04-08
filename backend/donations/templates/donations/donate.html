@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+
+    <!-- Donation Page -->
+        
+
     <title>Make a Donation</title>
+
+    <!-- hyperlink to the styles sheet-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'donations/style.css' %}">
+
 </head>
 <body>
-    <h1>Donate</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Donate</button>
-    </form>
+    <!-- Content of webpage wrapped in a container for styling -->
+    <div class="container">
+        <h1>Donate</h1>
+        <p style="text-align:center; color: #555; font-size: 18px;">
+            In the aftermath of the recent <strong style="color: #b71c1c;">earthquake</strong>, more than <strong style="color: #b71c1c;">2,900</strong> people were killed, and thousands have been <strong style="color: #b71c1c;">displaced </strong>— left without basic necessities, living in  <strong style="color: #b71c1c;">tents</strong> and  <strong style="color: #b71c1c;">camps.</strong> 
+        </p>
+        
+        <p style="text-align:center; color: #555; font-size: 17px;">
+            Your donation helps provide shelter, food, and medical aid to those who need it most.  
+            Every contribution makes a difference.
+        </p>
+        
+        
+
+        <p style="text-align:center; color: #555;"> I am simply a local trying to help my fellow country men, the earthquake came at a particallarly hard time, after years of droughts. You can learn more about the earthquakes by clicking on the links below.</p>
+        <!-- Donation form-->
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Donate</button>
+        </form>
+        <!-- External links/ ressources to learn more about the earthqake-->
+        <h2>Sources</h2>
+        <ul style="padding-left: 20px; color: #555;">
+            <li><a href="https://disasterphilanthropy.org/disasters/2023-morocco-earthquake/" target="_blank" rel="noopener">Center for Disaster Philanthropy: "2023 Morocco Earthquake"</a></li>
+            <li><a href="https://www.redcross.org.uk/stories/disasters-and-emergencies/world/morocco-earthquake-2023-latest-news-and-updates" target="_blank" rel="noopener">British Red Cross: "Morocco Earthquake 2023: Red Cross Red Crescent response"</a></li>
+            <li><a href="https://www.britannica.com/event/Morocco-earthquake-of-2023" target="_blank" rel="noopener">Britannica: Morocco Earthquake of 2023</a></li>
+            <li><a href="https://www.youtube.com/watch?v=E_zgtZi-YFc" target="_blank" rel="noopener">NBC News: "Video show the moment a 6.8-magnitude earthquake strikes Morocco" (Youtube)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=M8H5AqxpThU" target="_blank" rel="noopener">Sky news: "Morocco Earthquake, CCTV captures moment quake struck Marrakech" (Youtube)</a></li>
+        </ul>
+
+
+    </div>
 </body>
 </html>
