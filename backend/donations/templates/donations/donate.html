@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Donation Page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Make a Donation</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'donations/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Donate</h1>
+
+        <p class="intro-paragraph">
+            In the aftermath of the recent <strong class="highlight">earthquake</strong>, more than
+            <strong class="highlight">2,900</strong> people were killed, and thousands have been
+            <strong class="highlight">displaced</strong> — left without basic necessities, living in
+            <strong class="highlight">tents</strong> and <strong class="highlight">camps.</strong>
+        </p>
+
+        <p class="intro-paragraph">
+            Your donation helps provide shelter, food, and medical aid to those who need it most.
+            Every contribution makes a difference.
+        </p>
+
+        <p class="intro-paragraph small">
+            I am simply a local trying to help my fellow country men, the earthquake came at a
+            particularly hard time, after years of droughts. You can learn more about the earthquakes
+            by clicking on the links below.
+        </p>
+
+        <!-- Donation form -->
+        <form method="POST" class="donation-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn-primary">Donate</button>
+        </form>
+
+        <!-- External links / resources -->
+        <h2>Sources</h2>
+        <ul class="sources-list">
+            <li>
+                <a href="https://disasterphilanthropy.org/disasters/2023-morocco-earthquake/"
+                   target="_blank" rel="noopener">
+                    Center for Disaster Philanthropy: "2023 Morocco Earthquake"
+                </a>
+            </li>
+            <li>
+                <a href="https://www.redcross.org.uk/stories/disasters-and-emergencies/world/morocco-earthquake-2023-latest-news-and-updates"
+                   target="_blank" rel="noopener">
+                    British Red Cross: "Morocco Earthquake 2023: Red Cross Red Crescent response"
+                </a>
+            </li>
+            <li>
+                <a href="https://www.britannica.com/event/Morocco-earthquake-of-2023"
+                   target="_blank" rel="noopener">
+                    Britannica: Morocco Earthquake of 2023
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=E_zgtZi-YFc"
+                   target="_blank" rel="noopener">
+                    NBC News: "Video show the moment a 6.8-magnitude earthquake strikes Morocco"
+                    (YouTube)
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=M8H5AqxpThU"
+                   target="_blank" rel="noopener">
+                    Sky News: "Morocco Earthquake, CCTV captures moment quake struck Marrakech"
+                    (YouTube)
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
