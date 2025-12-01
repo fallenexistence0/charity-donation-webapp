@@ -51,12 +51,25 @@ This is a lightweight Django project built to collect donations and display them
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
+git clone https://github.com/fallenexistence0/charity-donation-webapp.git
+cd charity-donation-webapp.git
+```
 
+```
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+On linux and Macos
+```bash
+source venv/bin/activate
+```
 
+On windows 
+```
+venv\Scripts\activate
+```
+Then run the following to install the requirements
+
+```bash
 pip install -r requirements.txt
 python manage.py migrate
 ```
@@ -70,7 +83,7 @@ Make sure your virtual environment is active and then run:
 python manage.py runserver
 ```
 
-Open in your browser:
+Open your browser and go to the following link:
 
 ```
 http://127.0.0.1:8000/
@@ -87,7 +100,8 @@ http://127.0.0.1:8000/admin/
 
 ## Requirements
 
-Run `pip install -r requirements.txt`:
+- Python: Make sure you have the latest version of python, and don't forget to install the requirements txt folder.
+- Django: Realistically, all you need is python and Django, the requirements.txt file is there in case future updates add new dependencies.
 
 
 
